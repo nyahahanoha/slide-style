@@ -1,0 +1,144 @@
+/* @theme my-style */
+
+@import 'default';
+
+/* Common Elements */
+
+section {
+  background: #fff;
+  display: block;
+  font-size: 32px;
+  font-family: 'MS P Gothic', sans-serif;
+}
+section::after {
+  content: attr(data-marpit-pagination)" / "attr(data-marpit-pagination-total);
+  font-size: 26px;
+  color: #666;
+}
+footer {
+  font-size: 24px;
+  width: 97%;
+  text-align: center;
+  color: #666;
+}
+section blockquote {
+  color: #000;
+  margin-left: 1.5em;
+  margin-right: 0;
+  padding-left: 0.8em;
+  border-left: none;
+}
+section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+section table, th, td {
+  font-size: 85%;
+}
+section th {
+  background-color: #ccc;
+}
+section ul {
+  list-style-type: square;
+}
+section mjx-container {
+  font-family: 
+    'IBM Plex Math', 
+    'STIX Two Math',
+    sans-serif;
+}
+section mjx-container[display="true"] {
+  font-size: 120%;
+}
+section code {
+  font-family: 'Menlo', monospace;
+}
+
+/* Title Slide */
+
+section.title h1 {
+  color: #44c;
+  font-size: 56px;
+  text-align: center;
+} 
+section.title h2 {
+  color: #000;
+  font-size: 40px;
+  text-align: center;
+}
+section.title::after {
+  display: none;
+}
+
+/* Other than Title Slide */
+
+section:not(.title) h1 {
+  color: #44c;
+  display: block;
+  width: 92%;
+  font-size: 48px;
+}
+section:not(.title) h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 2px;
+  background-color: #444444;
+  margin: 12px auto 0;
+}
+section:not(.title) h2 {
+  color: #0af;
+  font-size: 40px;
+}
+
+
+/* Standard Slides */
+
+section.slide {
+  align-content: start;
+}
+
+/* Some-Columns class */
+
+section.columns-2,
+section.columns-3 {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+
+section.columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+section.columns-2 h1,
+section.columns-3 h1 {
+  grid-column: 1 / -1;
+}
+
+/* Thank-You Slide */
+
+section.thank-you {
+  display: flex;
+  align-items: center;      
+  justify-content: center; 
+}
+section.thank-you h1 {
+  color: #44c;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 64px;
+}
+section.thank-you h1::after {
+  content: "";
+  display: none;
+}
